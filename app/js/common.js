@@ -8,7 +8,6 @@ $(function () {
         speed: 2000,
         fade: true,
         arrows: false,
-        adaptiveHeight: true,
         cssEase: 'linear'
     });
 
@@ -21,7 +20,6 @@ $(function () {
         $(".sandwich").toggleClass("active");
         $(".top_text").css("opacity", "1");
     }).append("<span>");
-
     $(".toggle_mnu").click(function() {
         if ($(".top_mnu").is(":visible")) {
             $(".top_text").css("opacity", "1");

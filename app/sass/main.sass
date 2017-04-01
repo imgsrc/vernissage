@@ -26,8 +26,12 @@ $output-bourbon-deprecation-warnings: false !default
     padding-top: 15%
     h1
       margin-bottom: 50px
+      color: #fff
+      span
+        color: $pink
     h3
       text-transform: none
+      color: #fff
 
 .slider-head
   position: absolute
@@ -131,8 +135,9 @@ $h: 4px
       display: block
       &:hover
         background-color: $pink
+        color: $white
       a
-        color: #ffffff
+        color: $pink
         font-family: "Open Sans SemiBold", sans-serif
         display: block
         padding: 20px 0
@@ -141,6 +146,8 @@ $h: 4px
         font-size: 12px
         opacity: 0
         position: relative
+        &:hover
+          color: $white
 
       span
         display: block
