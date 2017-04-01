@@ -1,4 +1,8 @@
 $(function () {
+    var wow = new WOW({
+        offset: 100
+    })
+    wow.init();
 
     //Slick slider
     $(".slider-head").slick({

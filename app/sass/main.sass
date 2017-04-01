@@ -14,24 +14,38 @@ $output-bourbon-deprecation-warnings: false !default
     z-index: 10
     h3
       margin-top: 0
-    .top-phone
-      text-align: right
-      p
+    .top-contacts
+      .phone
         margin-top: 0
-        font-family: "Exo2Bold", serif
-        font-size: 20px
+        font-family: "Exo 2", serif
+        font-weight: bold
+        font-size: em(28px)
+        a
+          color: #fff
+      .address
+        font-size: em(18px)
+      .fa
+        margin-right: 6px
       .button
         padding: 7px 20px
   .header-content
     padding-top: 15%
     h1
       margin-bottom: 50px
+      text-shadow: 0 5px 10px rgba($color, .7)
       color: #fff
       span
         color: $pink
     h3
       text-transform: none
+      text-shadow: 0 5px 10px rgba($color, .7)
       color: #fff
+      margin-bottom: 60px
+    p
+      font-size: em(20px)
+      font-family: "Open Sans Light", sans-serif
+      color: #fff
+      text-shadow: 0 5px 10px rgba($color, .7)
 
 .slider-head
   position: absolute
@@ -51,7 +65,7 @@ $output-bourbon-deprecation-warnings: false !default
   left: 40px
   top: 40px
   z-index: 100
-  border: 1px solid $pink
+  border: 2px solid $blue
   border-radius: 4px
   span
     display: block
@@ -74,22 +88,25 @@ $h: 4px
     .sw-topper
       top: 10px
       transform: rotate(-45deg)
+      background-color: $blue
 
     .sw-bottom
       top: 6px
       transform: rotate(45deg)
+      background-color: $blue
 
     .sw-footer
       opacity: 0
       top: 0
       transform: rotate(180deg)
+      background-color: $blue
 
 .sw-topper
   position: relative
   top: 0
   width: $w
   height: $h
-  background: $pink
+  background-color: $white
   border: none
   border-radius: 4px 4px 4px 4px
   transition: transform 0.5s, top 0.2s
@@ -100,7 +117,7 @@ $h: 4px
   width: $w
   height: $h
   top: $h * 2.5
-  background: $pink
+  background-color: $white
   border: none
   border-radius: 4px 4px 4px 4px
   transition: transform 0.5s, top 0.2s
@@ -111,7 +128,7 @@ $h: 4px
   width: $w
   height: $h
   top: $h * 5
-  background: $pink
+  background-color: $white
   border: none
   border-radius: 4px 4px 4px 4px
   transition: all 0.5s
@@ -138,6 +155,7 @@ $h: 4px
         color: $white
       a
         color: $pink
+        text-shadow: 0 5px 5px rgba($pink, .7)
         font-family: "Open Sans SemiBold", sans-serif
         display: block
         padding: 20px 0
@@ -145,10 +163,10 @@ $h: 4px
         text-decoration: none
         font-size: 12px
         opacity: 0
+        +mt(.5s)
         position: relative
         &:hover
           color: $white
-
       span
         display: block
         position: relative
@@ -158,50 +176,58 @@ $h: 4px
         +transition(all 0.5s ease)
         &:hover
           background-color: rgba(255, 255, 255, 0.08)
-
+.hvr-shutter-out-vertical
+  background-color: $lightblue
 
 .s-about
+  padding-top: 100px
+  .about-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-around
   &-item
+    max-width: 150px
+    &:hover
+      img
+        transform: scale(1.1)
     img
+      +mt(.5s)
       width: 150px
       margin-bottom: 20px
 
-.s-features
-  color: $white
-  img
-    width: 150px
-    margin-bottom: 20px
-
 .s-works
-  .col-md-3
-    padding: 5px 5px
+  background-color: $lightblue
+  .col-md-4
+    padding: 10px 10px
   .slide
     position: relative
     overflow: hidden
     display: block
+    box-shadow: 0 5px 10px rgba($color, .4)
     a
       display: block
     &:hover
       .slide-content
         opacity: 1
         transform: scale(.95)
+      img
+        transform: scale(1.1)
     img
       +mt(.5s)
     &-content
       position: absolute
-      color: darken($color, 10%)
-      padding-top: 10%
+      color: #fff
+      padding: 10% 10px 0
       top: 0
       left: 0
       width: 100%
       height: 100%
       opacity: 0
-      background-color: rgba($white, .65)
+      background-color: rgba($pink, .65)
       text-align: center
       +mt(.5s)
-      transform: scale(1.1)
       .fa
-        color: darken($color, 10%)
+        color: lighten($white, 10%)
         font-size: 40px
         padding: 20px 20px 5px
   h3
@@ -219,15 +245,51 @@ $h: 4px
   .col-sm-12
     padding: 0
 
+.s-features
+  color: $white
+  .heading
+    margin-bottom: 50px
+    h2
+      margin-bottom: 30px
+    p
+      font-size: em(18px)
+  .feat-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    .s-feat-item
+      .img-svg
+        width: 150px
+        height: auto
+        margin-bottom: 20px
+      .item-text
+        span
+          color: $yellow
+          font-size: em(22px)
+
+
+.action
+  padding: 50px 0
+  h2
+    margin-bottom: 20px
+  h3
+    margin-bottom: 40px
+    font-size: em(40px)
+    text-shadow: 0 5px 3px rgba($blue, .5)
+    color: $blue
+  h4
+    font-size: em(22px)
+
+
 .s-contacts
-  background-color: lighten($color, 20%)
+  background-color: lighten($blue, 20%)
   color: $white
   padding-top: 60px
 
 .form
   display: block
   padding: 20px 30px
-  border: 1px solid rgba($accent, 20%)
+  border: 1px solid rgba($pink, 20%)
   border-radius: 8px
   margin-bottom: 50px
   &-head
@@ -247,7 +309,7 @@ $h: 4px
       outline: none
       background-color: transparent
       color: $white
-      border: 1px solid rgba($accent, 20%)
+      border: 1px solid rgba($pink, 20%)
       border-radius: 5px
       margin-bottom: 20px
       padding: 10px 16px
@@ -256,17 +318,17 @@ $h: 4px
 
 .contacts-text
   h3
-    margin: 20px 0 20px
+    margin-bottom: 30px
     text-transform: none
   p
-    font-size: em(15px)
-    margin-bottom: 15px
+    margin-bottom: 20px
   .fa
-    margin-right: 0
+    margin-right: 8px
     width: 15px
     font-size: 20px
   a
-    text-decoration: none
+    text-decoration: underline
+    color: $white
     .img-svg
       margin-top: 20px
       margin-right: 20px
@@ -275,6 +337,8 @@ $h: 4px
       .img-svg
         path
           fill: $accent !important
+.map
+  margin-top: 30px
 
 .form.form-callback
   background-color: rgba($white, .1)
