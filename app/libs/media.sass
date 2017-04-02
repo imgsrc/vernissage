@@ -1,5 +1,6 @@
 // Breakpoints
 $xl: 1200px
+$ip: 1024px
 $lg: 992px
 $md: 768px
 $sm: 576px
@@ -12,6 +13,14 @@ $xs: $sm - 1px
       @content
   @else if ($direction == down)
     @media screen and (max-width: $xl + $margin * 2)
+      @content
+
+=media-ip($direction: one)
+  @if ($direction == up or $direction == one)
+    @media screen and (min-width: $ip + $margin * 2)
+      @content
+  @else if ($direction == down)
+    @media screen and (max-width: $ip + $margin * 2)
       @content
 
 =media-lg($direction: one)

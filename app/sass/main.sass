@@ -8,12 +8,15 @@ $output-bourbon-deprecation-warnings: false !default
   color: $white
   position: relative
   min-height: 100vh
-  +media-sm(down)
+  +media-xl(down)
     background: url(../img/slider/3.jpg) no-repeat center
     background-size: cover
   .top-line
     padding: 20px 0
     position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
     z-index: 10
     h3
       margin-top: 0
@@ -111,6 +114,8 @@ $h: 4px
 
     .sw-bottom
       top: 6px
+      +media-sm(down)
+        top: 8px
       transform: rotate(45deg)
       background-color: $blue
 
@@ -297,7 +302,7 @@ $h: 4px
       flex-direction: column
     justify-content: space-around
     .s-feat-item
-      .img-svg
+      img
         width: 150px
         height: auto
         margin-bottom: 30px

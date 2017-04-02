@@ -6,7 +6,7 @@ $(function () {
 
     //Mobile Detect
     var md = new MobileDetect(window.navigator.userAgent);
-    if(!md.mobile()) {
+    if(!md.tablet() || !md.mobile()) {
         $(".slider-head").slick({
             dots: false,
             autoplay: true,
@@ -17,7 +17,7 @@ $(function () {
             cssEase: 'linear'
         });
     } else {
-        $(".slider-head").slick('unslick');
+        $(".slider-head").slick({destroy: true});
     }
 
     //Slick slider
