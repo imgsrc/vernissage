@@ -8,6 +8,9 @@ $output-bourbon-deprecation-warnings: false !default
   color: $white
   position: relative
   min-height: 100vh
+  +media-sm(down)
+    background: url(../img/slider/3.jpg) no-repeat center
+    background-size: cover
   .top-line
     padding: 20px 0
     position: relative
@@ -20,16 +23,25 @@ $output-bourbon-deprecation-warnings: false !default
         font-family: "Exo 2", serif
         font-weight: bold
         font-size: em(28px)
+        +media-xs(down)
+          font-size: em(22px)
         a
           color: #fff
       .address
         font-size: em(18px)
+        +media-xs(down)
+          font-size: em(16px)
       .fa
         margin-right: 6px
       .button
         padding: 7px 20px
   .header-content
     padding-top: 15%
+    +media-xs(down)
+      padding-top: 10%
+      h1
+        margin-bottom: 40px
+        font-size: em(42px)
     h1
       margin-bottom: 50px
       text-shadow: 0 5px 10px rgba($color, .7)
@@ -59,6 +71,9 @@ $output-bourbon-deprecation-warnings: false !default
 .toggle_mnu
   width: 60px
   height: 60px
+  +media-sm(down)
+    width: 40px
+    height: 40px
   float: left
   background-color: transparent
   position: fixed
@@ -77,6 +92,10 @@ $h: 4px
 .sandwich
   width: $w
   height: $w
+  +media-sm(down)
+    width: 28px
+    height: 2px
+    top: -24px
   position: absolute
   top: 8px
   bottom: 0
@@ -111,6 +130,9 @@ $h: 4px
   border-radius: 4px 4px 4px 4px
   transition: transform 0.5s, top 0.2s
   display: block
+  +media-sm(down)
+    width: 28px
+    height: 2px
 
 .sw-bottom
   position: relative
@@ -122,6 +144,9 @@ $h: 4px
   border-radius: 4px 4px 4px 4px
   transition: transform 0.5s, top 0.2s
   transition-delay: 0.2s, 0s
+  +media-sm(down)
+    width: 28px
+    height: 2px
 
 .sw-footer
   position: relative
@@ -133,6 +158,9 @@ $h: 4px
   border-radius: 4px 4px 4px 4px
   transition: all 0.5s
   transition-delay: 0.1s
+  +media-sm(down)
+    width: 28px
+    height: 2px
 
 .top_mnu
   position: fixed
@@ -184,9 +212,18 @@ $h: 4px
   .about-wrap
     display: flex
     flex-direction: row
+    +media-sm(down)
+      flex-wrap: wrap
+      margin-right: 50px
+    +media-xs(down)
+      flex-direction: column
+      align-items: center
     justify-content: space-around
   &-item
     max-width: 150px
+    margin-bottom: 30px
+    +media-sm(down)
+      margin-right: 50px
     &:hover
       img
         transform: scale(1.1)
@@ -198,7 +235,7 @@ $h: 4px
 .s-works
   background-color: $lightblue
   .col-md-4
-    padding: 10px 10px
+    padding: 10px 10px 30px
   .slide
     position: relative
     overflow: hidden
@@ -256,17 +293,20 @@ $h: 4px
   .feat-wrap
     display: flex
     flex-direction: row
+    +media-xs(down)
+      flex-direction: column
     justify-content: space-around
     .s-feat-item
       .img-svg
         width: 150px
         height: auto
-        margin-bottom: 20px
+        margin-bottom: 30px
       .item-text
         span
-          color: $yellow
+          color: darken($yellow, 20%)
           font-size: em(22px)
-
+  .button
+    margin-top: 30px
 
 .action
   padding: 50px 0

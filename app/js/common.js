@@ -4,16 +4,25 @@ $(function () {
     })
     wow.init();
 
+    //Mobile Detect
+    var md = new MobileDetect(window.navigator.userAgent);
+    if(!md.mobile()) {
+        $(".slider-head").slick({
+            dots: false,
+            autoplay: true,
+            infinite: true,
+            speed: 2000,
+            fade: true,
+            arrows: false,
+            cssEase: 'linear'
+        });
+    } else {
+        $(".slider-head").slick('unslick');
+    }
+
     //Slick slider
-    $(".slider-head").slick({
-        dots: false,
-        autoplay: true,
-        infinite: true,
-        speed: 2000,
-        fade: true,
-        arrows: false,
-        cssEase: 'linear'
-    });
+
+
 
     $(".toggle_mnu").click(function() {
         $(".sandwich").toggleClass("active");

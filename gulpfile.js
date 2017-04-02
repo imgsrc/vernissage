@@ -26,6 +26,7 @@ gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/jquery-migrate/jquery-migrate.min.js',
+        'app/libs/mobile-detect/mobile-detect.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/wow/dist/wow.min.js',
         'app/libs/parallax.js/parallax.js',
